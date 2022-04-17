@@ -17,8 +17,8 @@ const Routing: React.FC = () => {
        navigate('/home', {replace: true});
    }
 
-    const handleLogout = () => {
-       logout();
+    const handleLogout = async () => {
+       await logout();
        navigate('/login', {replace: true});
     }
 
