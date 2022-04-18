@@ -11,7 +11,7 @@ const Routing: React.FC = () => {
                 <Routes>
                     <Route index element={<Home />}/>
                     <Route path='/home' element={<Home />}/>
-                    <Route path='/:id' element={<Superhero />} />
+                    <Route path='/hero/:id' element={<Superhero />} />
                     <Route path='/login' element={<Login />} />
                 </Routes>
             </>

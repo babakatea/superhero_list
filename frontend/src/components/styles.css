@@ -32,3 +32,54 @@
     left: 37%;
     z-index: 100;
 }
+
+.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.logout-button.css-sghohy-MuiButtonBase-root-MuiButton-root {
+    float: right;
+    margin: 2px;
+    font-size: small;
+    width: 95px;
+    height: 40px;
+}
+
+.table-title {
+    margin-top: 1px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.MuiTableCell-root.MuiTableCell-head.MuiTableCell-sizeSmall.css-1howxi1-MuiTableCell-root {
+    font-weight: 600;
+}
+
+.table-container {
+    width: 99%;
+    height: 100%;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeSmall.MuiButton-containedSizeSmall.MuiButtonBase-root.add-hero.css-11qr2p8-MuiButtonBase-root-MuiButton-root {
+    margin-top: 5px;
+    background-color: #2fc92f;
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    width: 500px;
+    padding: 20px;
+}
+
+.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeSmall.MuiButton-containedSizeSmall.MuiButtonBase-root.create-hero.css-11qr2p8-MuiButtonBase-root-MuiButton-root {
+    margin-top: 10px;
+}
+
+.hero-name {
+    cursor: pointer;
+}
+
+.hero-description {
+    width: 80%;
+    margin-left: 10px;
+    margin-top: 5px;
+}

@@ -3,15 +3,18 @@ import {getHeroes} from "../../services/heroes";
 import {Button} from "@mui/material";
 import {logout} from "../../services/logout";
 import {useNavigate} from "react-router-dom";
+import {HeroesTable} from "./HeroesTable";
+import {HeroesData} from "../../interfaces";
+import '../styles.css';
 
 const Home: React.FC = () => {
     const navigate = useNavigate();
-    const [data, setData] = useState<any>(null);
+    const [heroesData, setHeroesData] = useState<HeroesData[]>([]);
 
     const getData = async () => {
         try {
-            const heroes = await getHeroes();
-            setData(heroes);
+            const {data} = await getHeroes();
+            setHeroesData(data);
         } catch (e: any) {
             if (e.response.status === 401) {
                 navigate('/login', {replace: true});
@@ -22,27 +25,30 @@ const Home: React.FC = () => {
     }
 
     useEffect( () => {
-       getData();
+        getData();
     }, []);
 
-    // createdAt: "2022-03-09T21:22:53.536Z"
-    // description: "Spider-Man has spider-like abilities including superhuman strength and the ability to cling to most surfaces. He is also extremely agile and has amazing reflexes. Spider-Man also has a “spider sense,” that warns him of impending danger. Spider-Man has supplemented his powers with technology."
-    // id: 1
-    // name: "Spider-Man"
-    // power: "Superhuman strength, Spider web shooting"
-    // shortDescription: "Spider-like abilities including superhuman strength and the ability to cling to most surfaces."
-    // updatedAt: "2022-03-09T21:22:53.536Z"
+    const removeHero = async (id: number) => {
+        // await removeHero(id); // Here the request should delete item
+        const updatedData = heroesData.filter((item) => item.id !== id); // mock the delete request
+        setHeroesData(updatedData);
+    }
+
+    const addHero = async (data: HeroesData) => {
+        // await addHero(data); // Here the request should add new hero
+        setHeroesData([...heroesData, data]); // mock the add request with random id
+    }
 
     const handleLogout = async () => {
         await logout();
         navigate('/login', {replace: true});
     }
 
-
     return(
-        <div style={{ height: 400, width: '100%' }}>
-            <Button variant="contained" onClick={handleLogout}>Log Out</Button>
-        </div>
+        <>
+            <Button className={'logout-button'} variant="contained" onClick={handleLogout}>Log Out</Button>
+            <HeroesTable data={heroesData} removeHero={(id: number) => removeHero(id)} addHero={(data: HeroesData) => addHero(data)} />
+        </>
     )
 }
 
