@@ -3,7 +3,7 @@ import {Routing} from "../routes";
 import {BrowserRouter as Router} from "react-router-dom";
 
 const App: React.FC = () => {
-  return (
+  return(
       <Router>
         <Routing />
       </Router>

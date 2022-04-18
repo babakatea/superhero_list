@@ -24,7 +24,6 @@ interface Props {
 
 const HeroesTable: React.FC<Props> = ({data, removeHero, addHero}) => {
     const [heroesData, setHeroesData] = useState<HeroesData | null>({
-        id: 0,
         name: '',
         shortDescription: '',
         description: '',
@@ -35,18 +34,13 @@ const HeroesTable: React.FC<Props> = ({data, removeHero, addHero}) => {
 
     const disableButton = !heroesData.name || !heroesData.shortDescription || !heroesData.description || !heroesData.power;
 
-    // Create random int for new hero`s id that should come from POST request
-    const getRandomInt = (max) => {
-        return Math.floor(Math.random() * max);
-    }
-
     const handleOpen = () => {
         setOpen(true);
     };
 
     const handleClose = () => {
         setOpen(false);
-        setHeroesData({id: 0, name: '', description: '', shortDescription: '', power: ''});
+        setHeroesData({name: '', description: '', shortDescription: '', power: ''});
     };
 
     const HeroDialog = (
@@ -55,7 +49,7 @@ const HeroesTable: React.FC<Props> = ({data, removeHero, addHero}) => {
             <Input
                 placeholder={'Hero`s name'}
                 value={heroesData?.name}
-                onChange={(e) => setHeroesData({...heroesData, id: getRandomInt(100),name: e.target.value})}
+                onChange={(e) => setHeroesData({...heroesData, name: e.target.value})}
             />
             <Input
                 placeholder={'Hero`s short description'}
@@ -104,21 +98,24 @@ const HeroesTable: React.FC<Props> = ({data, removeHero, addHero}) => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {data.map((item) => (
+                        {data.map((item, index) => (
                             <TableRow
-                                key={item.id}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                key={index}
+                                className={'hero-row'}
+                                sx={{'&:last-child td, &:last-child th': { border: 0 }}}
+                                onClick={() => navigate(`/hero/${item.id}`, {replace: true})}
                             >
-                                <TableCell component="th" scope="row"
-                                           onClick={() => {
-                                               navigate(`/hero/${item.id}`, {replace: true})
-                                           }}>
-                                    <span className={'hero-name'}>{item.name}</span>
-                                </TableCell>
+                                <TableCell component="th" scope="row">{item.name}</TableCell>
                                 <TableCell>{item.power}</TableCell>
                                 <TableCell>{item.shortDescription}</TableCell>
                                 <TableCell align={'center'}>
-                                    <DeleteIcon onClick={() => removeHero(item.id)} color={'error'}/>
+                                    <DeleteIcon
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            removeHero(item.id);
+                                        }}
+                                        color={'error'}
+                                    />
                                 </TableCell>
                             </TableRow>
                         ))}

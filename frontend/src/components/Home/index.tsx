@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {getHeroes} from "../../services/heroes";
+import {addNewHero, deleteHero, getHeroes} from "../../services/heroes";
 import {Button} from "@mui/material";
 import {logout} from "../../services/logout";
 import {useNavigate} from "react-router-dom";
@@ -15,7 +15,7 @@ const Home: React.FC = () => {
         try {
             const {data} = await getHeroes();
             setHeroesData(data);
-        } catch (e: any) {
+        } catch (e) {
             if (e.response.status === 401) {
                 navigate('/login', {replace: true});
             } else {
@@ -25,22 +25,29 @@ const Home: React.FC = () => {
     }
 
     useEffect( () => {
-        getData();
-    }, []);
-
-    const removeHero = async (id: number) => {
-        // await removeHero(id); // Here the request should delete item
-        const updatedData = heroesData.filter((item) => item.id !== id); // mock the delete request
-        setHeroesData(updatedData);
-    }
+        if (!heroesData.length) {
+            getData();
+        }
+    });
 
     const addHero = async (data: HeroesData) => {
-        // await addHero(data); // Here the request should add new hero
-        setHeroesData([...heroesData, data]); // mock the add request with random id
+        data = await addNewHero(data);
+        setHeroesData([...heroesData, data]);
+    }
+
+    const removeHero = async (id: number) => {
+        const removedId = await deleteHero(id);
+        if (removedId) {
+            setHeroesData(heroesData.filter((item) => item.id !== id));
+        }
     }
 
     const handleLogout = async () => {
-        await logout();
+        try {
+            await logout();
+        } catch (e) {
+            alert('Unable to log out')
+        }
         navigate('/login', {replace: true});
     }
 

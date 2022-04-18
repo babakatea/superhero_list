@@ -9,8 +9,8 @@ const Routing: React.FC = () => {
     return(
             <>
                 <Routes>
-                    <Route index element={<Home />}/>
-                    <Route path='/home' element={<Home />}/>
+                    <Route index element={<Home />} />
+                    <Route path='/home' element={<Home />} />
                     <Route path='/hero/:id' element={<Superhero />} />
                     <Route path='/login' element={<Login />} />
                 </Routes>
