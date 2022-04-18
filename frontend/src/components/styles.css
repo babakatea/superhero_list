@@ -62,7 +62,6 @@
 
 .MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeSmall.MuiButton-containedSizeSmall.MuiButtonBase-root.add-hero.css-11qr2p8-MuiButtonBase-root-MuiButton-root {
     margin-top: 5px;
-    background-color: #2fc92f;
 }
 
 .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
@@ -143,6 +142,9 @@
 
 .page-not-found {
     text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .page-not-found p:first-child {

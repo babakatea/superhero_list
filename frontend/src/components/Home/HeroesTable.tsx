@@ -9,7 +9,7 @@ import {
     TableCell,
     TableContainer,
     TableHead,
-    TableRow
+    TableRow, Typography
 } from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 import {HeroesData} from "../../interfaces";
@@ -45,7 +45,7 @@ const HeroesTable: React.FC<Props> = ({data, removeHero, addHero}) => {
 
     const HeroDialog = (
         <Dialog onClose={handleClose} open={open}>
-            <DialogTitle>Add new Superhero</DialogTitle>
+            <DialogTitle style={{textAlign: 'center'}}>Add new Superhero</DialogTitle>
             <Input
                 placeholder={'Hero`s name'}
                 value={heroesData?.name}
@@ -86,7 +86,7 @@ const HeroesTable: React.FC<Props> = ({data, removeHero, addHero}) => {
 
     return(
         <div className={'table-container'}>
-            <p className={'table-title'}>Superheroes table</p>
+            <Typography gutterBottom variant="h5" component="div" align={'center'}>Superheroes</Typography>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} size="small" aria-label="superheroes table">
                     <TableHead>
