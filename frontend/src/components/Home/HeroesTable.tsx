@@ -102,6 +102,7 @@ const HeroesTable: React.FC<Props> = ({data, removeHero, addHero}) => {
                             <TableRow
                                 key={index}
                                 className={'hero-row'}
+                                hover={true}
                                 sx={{'&:last-child td, &:last-child th': { border: 0 }}}
                                 onClick={() => navigate(`/hero/${item.id}`, {replace: true})}
                             >

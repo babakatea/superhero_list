@@ -79,13 +79,15 @@
 }
 
 .hero-description-container {
-    width: 95%;
+    width: 100%;
     margin-left: 10px;
     margin-top: 5px;
 }
 
 .hero-description {
     display: flex;
+    margin-top: 10px;
+    justify-content: center;
 }
 
 .Spider-Man-pic {
@@ -94,7 +96,7 @@
     background-color: #cccccc;
     background-position: center;
     background-size: cover;
-    width: 400px;
+    width: 500px;
     height: 200px;
     margin-top: 5px;
 }
@@ -105,9 +107,8 @@
     background-color: #cccccc;
     background-position: center;
     background-size: cover;
-    width: 400px;
-    height: 200px;
-    margin-top: 5px;
+    width: 100%;
+    height: 280px;
 }
 
 .Black.Panther-pic {
@@ -116,9 +117,8 @@
     background-color: #cccccc;
     background-position: center;
     background-size: cover;
-    width: 400px;
-    height: 200px;
-    margin-top: 5px;
+    width: 100%;
+    height: 280px;
 }
 
 .Black.Widow-pic {
@@ -127,9 +127,8 @@
     background-color: #cccccc;
     background-position: center;
     background-size: cover;
-    width: 400px;
-    height: 200px;
-    margin-top: 5px;
+    width: 100%;
+    height: 280px;
 }
 
 .Captain.America-pic {
@@ -138,7 +137,15 @@
     background-color: #cccccc;
     background-position: center;
     background-size: cover;
-    width: 400px;
-    height: 200px;
-    margin-top: 5px;
+    width: 100%;
+    height: 280px;
+}
+
+.page-not-found {
+    text-align: center;
+}
+
+.page-not-found p:first-child {
+    font-size: larger;
+    font-weight: bolder;
 }
