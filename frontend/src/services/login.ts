@@ -5,9 +5,6 @@ export const login = async () => {
 
     try {
         await api.post('/login', authData);
-        localStorage.setItem('token', 'token');
-
-        return Promise.resolve();
     } catch (e: any) {
         throw new Error(e.response.data.message);
     }
