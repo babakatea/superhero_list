@@ -30,13 +30,16 @@ const Superhero: React.FC = () => {
     }, [heroId]);
 
     return(
-        <div className={'hero-description'}>
+        <div className={'hero-description-container'}>
             <Button variant="contained" size={'small'} onClick={() => navigate('/home', {replace: true})}>Back</Button>
-            <div >
-                <p><b>Name: </b> {hero?.name} </p>
-                <p><b>Short description: </b> {hero?.shortDescription}</p>
-                <p><b>Power: </b> {hero?.power}</p>
-                <p><b>Description: </b> {hero?.description}</p>
+            <div className={'hero-description'}>
+                <div>
+                    <p><b>Name: </b> {hero?.name} </p>
+                    <p><b>Short description: </b> {hero?.shortDescription}</p>
+                    <p><b>Power: </b> {hero?.power}</p>
+                    <p><b>Description: </b> {hero?.description}</p>
+                </div>
+                <div className={`${hero?.name}-pic`} />
             </div>
         </div>
     )

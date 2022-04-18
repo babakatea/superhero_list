@@ -78,8 +78,67 @@
     cursor: pointer;
 }
 
-.hero-description {
-    width: 80%;
+.hero-description-container {
+    width: 95%;
     margin-left: 10px;
+    margin-top: 5px;
+}
+
+.hero-description {
+    display: flex;
+}
+
+.Spider-Man-pic {
+    background-image: url("../components/images/Spider-Man.png");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    margin-top: 5px;
+}
+
+.Iron.Man-pic {
+    background-image: url("../components/images/Iron-man.png");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    margin-top: 5px;
+}
+
+.Black.Panther-pic {
+    background-image: url("../components/images/Black-Panther.png");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    margin-top: 5px;
+}
+
+.Black.Widow-pic {
+    background-image: url("../components/images/Black-Window.png");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    margin-top: 5px;
+}
+
+.Captain.America-pic {
+    background-image: url("../components/images/Captain-America.png");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 200px;
     margin-top: 5px;
 }

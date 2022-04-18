@@ -35,7 +35,7 @@ const HeroesTable: React.FC<Props> = ({data, removeHero, addHero}) => {
 
     const disableButton = !heroesData.name || !heroesData.shortDescription || !heroesData.description || !heroesData.power;
 
-    // Create random int for new hero id that should come from POST request
+    // Create random int for new hero`s id that should come from POST request
     const getRandomInt = (max) => {
         return Math.floor(Math.random() * max);
     }
