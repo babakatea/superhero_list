@@ -1,0 +1,153 @@
+.login-screen {
+    background-image: url("../components/images/fat-superheroes.jpeg");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.login-paper {
+    background-color: white;
+    font-size: x-large;
+    font-weight: bold;
+    opacity: 0.8;
+    border-radius: 15px;
+    height: 20%;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 35%;
+}
+
+.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.login-button.css-sghohy-MuiButtonBase-root-MuiButton-root {
+    position: absolute;
+    top: 46%;
+    left: 37%;
+    z-index: 100;
+}
+
+.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.logout-button.css-sghohy-MuiButtonBase-root-MuiButton-root {
+    float: right;
+    margin: 2px;
+    font-size: small;
+    width: 95px;
+    height: 40px;
+}
+
+.table-title {
+    margin-top: 1px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.MuiTableCell-root.MuiTableCell-head.MuiTableCell-sizeSmall.css-1howxi1-MuiTableCell-root {
+    font-weight: 600;
+}
+
+.table-container {
+    width: 99%;
+    height: 100%;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeSmall.MuiButton-containedSizeSmall.MuiButtonBase-root.add-hero.css-11qr2p8-MuiButtonBase-root-MuiButton-root {
+    margin-top: 5px;
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    width: 500px;
+    padding: 20px;
+}
+
+.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeSmall.MuiButton-containedSizeSmall.MuiButtonBase-root.create-hero.css-11qr2p8-MuiButtonBase-root-MuiButton-root {
+    margin-top: 10px;
+}
+
+.hero-row {
+    cursor: pointer;
+}
+
+.hero-description-container {
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.hero-description {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.Spider-Man-pic {
+    background-image: url("../components/images/Spider-Man.png");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    background-size: cover;
+    width: 500px;
+    height: 200px;
+    margin-top: 5px;
+}
+
+.Iron.Man-pic {
+    background-image: url("../components/images/Iron-man.png");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 280px;
+}
+
+.Black.Panther-pic {
+    background-image: url("../components/images/Black-Panther.png");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 280px;
+}
+
+.Black.Widow-pic {
+    background-image: url("../components/images/Black-Window.png");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 280px;
+}
+
+.Captain.America-pic {
+    background-image: url("../components/images/Captain-America.png");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 280px;
+}
+
+.page-not-found {
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.page-not-found p:first-child {
+    font-size: larger;
+    font-weight: bolder;
+}
